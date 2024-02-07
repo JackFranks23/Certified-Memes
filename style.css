@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    justify-content: center;
+}
+.pagewrapper {
+    display: flex;
+
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25vw;
+}
+.right {
+    width: 75vw;
+    background-color: lightblue;
+}
+.input {
+ margin: 5%;
+ padding: 2%;
+ max-width: 150px;
+}
+label {
+    font-size: 24px;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+select {
+    margin-bottom: 1vh;
+}
+#submitBtn {
+    font-size: 16px;
+}
