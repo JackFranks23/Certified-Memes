@@ -19,36 +19,30 @@
 
     <form action="" id="myForm" class="top">
 
-      <section class="column">
-        <label for="name">Who's recieving this award?</label>
+      <label for="name">Who's receiving this award?</label>
+      <input type="text" name="name" id="name" placeholder="Recipient">
 
-        <input type="text" name="name" id="name" placeholder="Name">
-      </section>
+      <label for="donor">What's your name?</label>
+      <input type="text" name="donor" id="donor" placeholder="Donor">
 
-      <section class="column">
-        <label for="donor">What's your name?</label>
+      <label for="type">Which certificate?</label>
+      <select name="type" id="type">
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="Mid">Mid</option>
+      </select>
 
-        <input type="text" name="donor" id="donor" placeholder="Donor">
-      </section>
-
-      <section class="column">
-        <label for="type">Which certificate?</label>
-
-        <select name="type" id="type">
-          <option value="A">A</option>
-          <option value="B">B</option>
-          <option value="Mid">Mid</option>
-        </select>
-      </section>
 
     </form>
-    <input type="submit" value="Get Certificate" />
+    <input type="submit" value="Print Certificate!" onclick="window.print()" />
 
 
     <section class="bottom">
 
       <div class="certificate" id="certificate">
         <span id="nameOutput"></span>
+        <span id="donorOutput"></span>
+        <span id="today"></span>
         <span id="info"></spam>
       </div>
 

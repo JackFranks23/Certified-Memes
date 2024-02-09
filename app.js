@@ -7,17 +7,18 @@ document.addEventListener("DOMContentLoaded", function () {
         buttons.forEach(button => button.addEventListener('click', processForm))
     }
   
-    // optionally update when fields update
-    // tbd
     document.getElementById('name').addEventListener('change', function (eventData) {
         let nameOutput = document.getElementById('nameOutput');
-        // console.log(eventData);
         nameOutput.innerText = eventData.target.value;
     });
   
+    document.getElementById('donor').addEventListener('change', function (eventData) {
+        let donorOutput = document.getElementById('donorOutput');
+        donorOutput.innerText = eventData.target.value;
+    });
+
     document.getElementById('type').addEventListener('change', function (eventData) {
         let nameOutput = document.getElementById('nameOutput');
-        // console.log(eventData);
         let info = document.getElementById('info');
         info.innerText = eventData.target.value;
         changeCert(eventData.target.value);
@@ -33,10 +34,16 @@ document.addEventListener("DOMContentLoaded", function () {
         //update certificate information when form is submitted:
         let nameOutput = document.getElementById('nameOutput');
         let info = document.getElementById('info');
+        let donotOutput = document.getElementById('donorOutput');
         nameOutput.innerText = formData.name;
         info.innerText = formData.type;
+        donorOutput.innerText = formData.donor;
   
       });
+
+      let theDate = new Date().toLocaleDateString('en-us', {day:"2-digit", month:"2-digit",year:"2-digit"})
+      let today = document.getElementById('today');
+      today.innerText = theDate
     // Log readiness to console
     console.log("Ready");
   
