@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         //update certificate information when form is submitted:
         let nameOutput = document.getElementById('nameOutput');
         let info = document.getElementById('info');
-        let donotOutput = document.getElementById('donorOutput');
+        let donorOutput = document.getElementById('donorOutput');
         nameOutput.innerText = formData.name;
         info.innerText = formData.type;
         donorOutput.innerText = formData.donor;
